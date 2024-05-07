@@ -16,14 +16,14 @@ contract ECFund is ERC20, AccessManager, ReentrancyGuard, FundECtools {
     using SafeERC20 for IERC20;
     
     uint256 public ETFprice;
-    uint256 public fundOperationsCommision; // xx,xx% format, sets like uint256 xxxx
+    uint256 public fundOperationsCommision; 
     address public fundTreasury;
 
     IERC20 public _USDT_ADDRESS;
     IERC20 public _DAI_ADDRESS;
 
-    address secAdm = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db; // <= CHANGE TO YURI/ARTEM
-    address thirdAdm = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2; // <= CHANGE TO YURI/ARTEM
+    address secAdm = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db; 
+    address thirdAdm = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2; 
     
     uint64 public constant BOT = 8;
     uint64 public constant SECOND_ADM = 9;
@@ -38,7 +38,7 @@ contract ECFund is ERC20, AccessManager, ReentrancyGuard, FundECtools {
     mapping(address => uint256[]) internal transactionsSell; 
     mapping(address => Lock[]) public locks;
     mapping(address => uint256) public totalLocked;
-    mapping (address => uint256) public avaivableForWithdraw; // decimals 18
+    mapping (address => uint256) public avaivableForWithdraw; 
 
     // EVENTS
     event newPrice(address setterPrice, uint256 newPrice);
